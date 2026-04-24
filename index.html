@@ -12,8 +12,8 @@
 <style>
 body{
 font-family:'Tajawal',sans-serif;
-background:#FAFAFA;
-color:#333;
+background:#FFF7F9;
+color:#444;
 text-align:center;
 }
 
@@ -25,45 +25,45 @@ padding:20px;
 
 .card{
 background:#fff;
-border-radius:20px;
+border-radius:25px;
 padding:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-}
-
-.title{
-font-family:'Aref Ruqaa',serif;
-font-size:28px;
-color:#B8860B;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
 .verse{
 font-family:'Amiri',serif;
 color:#556B2F;
-margin-bottom:10px;
+margin-bottom:15px;
+}
+
+.names{
+font-family:'Aref Ruqaa',serif;
+font-size:30px;
+color:#d46a6a;
 }
 
 .counter{
 display:flex;
 justify-content:center;
-gap:8px;
+gap:10px;
 margin-top:15px;
 }
 
 .counter div{
-background:#F3F3F3;
-padding:8px;
-border-radius:10px;
-width:60px;
+background:#F8F8F8;
+padding:10px;
+border-radius:12px;
+width:65px;
 }
 
 .counter span{
-color:#B8860B;
+color:#d46a6a;
 font-weight:bold;
 }
 
 .btn{
-background:#556B2F;
-color:#fff;
+background:#d46a6a;
+color:white;
 padding:10px;
 border-radius:30px;
 margin-top:10px;
@@ -84,32 +84,29 @@ margin-top:8px;
 
 <div class="container">
 
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200" class="rounded-xl mb-4">
-
 <div class="card">
 
+<!-- الآية -->
 <p class="verse">
-﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا ﴾
+﴿ وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾
 </p>
 
-<h2 class="title">أحمد & فاطمة</h2>
+<!-- الصورة -->
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200" class="rounded-xl mb-4">
 
-<p class="mt-2">يسعدنا دعوتكم لحضور حفل زفافنا</p>
+<!-- الأسماء -->
+<h2 class="names">عمر & عائشة</h2>
 
-<p class="mt-2">
-📅 الجمعة 10 مايو 2026  
-⏰ الساعة 7:00 مساءً
+<!-- كلمة الدعوة -->
+<p class="mt-3">
+بكل حب وامتنان…  
+يسعدنا أن نشارككم بداية حكايتنا الجديدة 💍  
+وجودكم هو أجمل هدية لنا
 </p>
 
-<p class="mt-2">
-📍 قاعة دار الفؤاد – مدينة نصر
-</p>
+<!-- عداد -->
+<h3 class="mt-4 font-bold">⏳ عداد فرحتنا</h3>
 
-<a href="https://maps.google.com/?q=Dar Al Fouad Hall" target="_blank" class="btn">
-افتح الخريطة
-</a>
-
-<!-- COUNTDOWN -->
 <div class="counter">
 <div><span id="d"></span><br>يوم</div>
 <div><span id="h"></span><br>ساعة</div>
@@ -117,25 +114,50 @@ margin-top:8px;
 <div><span id="s"></span><br>ثانية</div>
 </div>
 
-<!-- FORM -->
-<div class="mt-4">
-<input placeholder="اسمك">
-<textarea placeholder="اكتب كلمة للعروسين"></textarea>
-<button class="btn">إرسال</button>
+<!-- التفاصيل -->
+<div class="mt-5 text-sm">
+
+<p class="mt-3">
+📅 الأحد 15 يونيو 2026  
+⏰ الساعة 6:00 مساءً
+</p>
+
+<p class="mt-3">
+📍 فندق هيلتون – مصر الجديدة
+</p>
+
 </div>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/201211345434?text=عايز%20أطلب%20دعوة%20زفاف" class="btn">
-اطلب نفس التصميم
+<!-- الخريطة -->
+<a href="https://maps.google.com/?q=Hilton Cairo Heliopolis" target="_blank" class="btn">
+افتح الموقع على الخريطة
 </a>
 
+<!-- رسالة -->
+<div class="mt-5">
+
+<h3 class="font-bold mb-2">💌 اكتب كلمة للعروسين</h3>
+
+<input placeholder="اسمك">
+<textarea placeholder="اكتب كلمة جميلة..."></textarea>
+
+<button class="btn">إرسال</button>
+
 </div>
+
+</div>
+
+<!-- بيانات -->
+<p class="text-xs text-gray-400 mt-4">
+تصميم: Kero Digital  
+📞 01211345434
+</p>
 
 </div>
 
 <script>
 setInterval(()=>{
-let diff=new Date("May 10 2026 19:00:00")-new Date();
+let diff=new Date("June 15 2026 18:00:00")-new Date();
 
 document.getElementById("d").innerText=Math.floor(diff/(1000*60*60*24));
 document.getElementById("h").innerText=Math.floor((diff/(1000*60*60))%24);
