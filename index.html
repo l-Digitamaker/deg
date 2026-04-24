@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>دعوة زفاف</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal&family=Aref+Ruqaa&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Tajawal',sans-serif;
+background:#FAFAFA;
+color:#333;
+text-align:center;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#fff;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.title{
+font-family:'Aref Ruqaa',serif;
+font-size:28px;
+color:#B8860B;
+}
+
+.verse{
+font-family:'Amiri',serif;
+color:#556B2F;
+margin-bottom:10px;
+}
+
+.counter{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:15px;
+}
+
+.counter div{
+background:#F3F3F3;
+padding:8px;
+border-radius:10px;
+width:60px;
+}
+
+.counter span{
+color:#B8860B;
+font-weight:bold;
+}
+
+.btn{
+background:#556B2F;
+color:#fff;
+padding:10px;
+border-radius:30px;
+margin-top:10px;
+display:block;
+}
+
+input,textarea{
+width:100%;
+border:1px solid #eee;
+padding:8px;
+border-radius:10px;
+margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200" class="rounded-xl mb-4">
+
+<div class="card">
+
+<p class="verse">
+﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا ﴾
+</p>
+
+<h2 class="title">أحمد & فاطمة</h2>
+
+<p class="mt-2">يسعدنا دعوتكم لحضور حفل زفافنا</p>
+
+<p class="mt-2">
+📅 الجمعة 10 مايو 2026  
+⏰ الساعة 7:00 مساءً
+</p>
+
+<p class="mt-2">
+📍 قاعة دار الفؤاد – مدينة نصر
+</p>
+
+<a href="https://maps.google.com/?q=Dar Al Fouad Hall" target="_blank" class="btn">
+افتح الخريطة
+</a>
+
+<!-- COUNTDOWN -->
+<div class="counter">
+<div><span id="d"></span><br>يوم</div>
+<div><span id="h"></span><br>ساعة</div>
+<div><span id="m"></span><br>دقيقة</div>
+<div><span id="s"></span><br>ثانية</div>
+</div>
+
+<!-- FORM -->
+<div class="mt-4">
+<input placeholder="اسمك">
+<textarea placeholder="اكتب كلمة للعروسين"></textarea>
+<button class="btn">إرسال</button>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/201211345434?text=عايز%20أطلب%20دعوة%20زفاف" class="btn">
+اطلب نفس التصميم
+</a>
+
+</div>
+
+</div>
+
+<script>
+setInterval(()=>{
+let diff=new Date("May 10 2026 19:00:00")-new Date();
+
+document.getElementById("d").innerText=Math.floor(diff/(1000*60*60*24));
+document.getElementById("h").innerText=Math.floor((diff/(1000*60*60))%24);
+document.getElementById("m").innerText=Math.floor((diff/(1000*60))%60);
+document.getElementById("s").innerText=Math.floor((diff/1000)%60);
+},1000);
+</script>
+
+</body>
+</html>
